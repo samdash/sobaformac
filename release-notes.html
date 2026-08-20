@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f7fb">
+<link rel="icon" type="image/png" href="assets/soba-brand.png">
+<link rel="stylesheet" href="styles.css"><title>SOBA Release Notes</title><script>
+(function(){const K="soba-theme";const saved=localStorage.getItem(K);const pref=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=saved||pref;
+addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[data-theme-choice]");function u(){bs.forEach(b=>b.classList.toggle("active",b.dataset.themeChoice===document.documentElement.dataset.theme))}bs.forEach(b=>b.onclick=()=>{document.documentElement.dataset.theme=b.dataset.themeChoice;localStorage.setItem(K,b.dataset.themeChoice);u()});u()})})();
+</script></head><body>
+<div class="page-glow page-glow-one"></div><div class="page-glow page-glow-two"></div>
+<header class="site-header">
+    <a class="brand brand-rich" href="index.html" aria-label="SOBA home">
+      <img src="assets/soba-brand.png" alt="" class="brand-icon" />
+      <span class="brand-stack"><strong>SOBA</strong><small>Your Mac Sidekick</small></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#quick-capture">Quick Capture</a>
+      <a href="index.html#smart-actions">Smart Actions</a>
+      <a href="index.html#qr">QR</a>
+      <a href="index.html#refined-experience">More</a>
+      <a href="index.html#privacy">Privacy</a>
+      <a href="release-notes.html">Release Notes</a>
+    </nav>
+
+    <div class="theme-toggle theme-toggle-labeled" aria-label="Website appearance">
+      <button type="button" data-theme-choice="light" title="Light mode" aria-label="Light mode"><span>☀</span> Light</button>
+      <button type="button" data-theme-choice="dark" title="Dark mode" aria-label="Dark mode"><span>◔</span> Dark</button>
+    </div>
+  </header>
+<main><section class="legal-hero"><div class="eyebrow">Release Notes</div><h1>What's new in SOBA</h1><p>Release history and feature updates.</p></section>
+<section class="content-page"><div class="content-card">
+<h2>SOBA 1.2</h2><p class="release-date">August 2026</p>
+<div class="release-block"><h3>Core workflows</h3><ul><li>Drop — temporary shelf for files, folders, images, URLs, and more.</li><li>Later — bring something back at the right time.</li><li>Pin — keep references visible above your work.</li><li>Share — send selected items to trusted destinations.</li><li>Actions — contextual tools based on what SOBA detects.</li></ul></div>
+<div class="release-block"><h3>Quick Capture</h3><ul><li>Open SOBA with <code>⌥ S</code>.</li><li>Type, paste, or drop content directly.</li><li>Contextual handling for JSON, URLs, images, PDFs, addresses, timestamps, terminal commands, paths, and more.</li></ul></div>
+<div class="release-block"><h3>Smart Actions</h3><ul><li>Image actions: preview, convert, resize, compress, metadata tools, OCR, and path actions.</li><li>PDF actions: Compress, Quick Look, Split, Extract Pages, and path utilities.</li><li>Folder/project actions: Terminal, IntelliJ, VS Code, Finder, path tools, and Compress.</li></ul></div>
+<div class="release-block"><h3>Drag-to-edge</h3><ul><li>Configure SOBA to appear from the right, left, top, or bottom edge.</li><li>Drag files toward that edge to access Drop, Later, Pin, Share, and dynamic Quick Actions.</li></ul></div>
+
+<div class="release-block"><h3>Polish & platform integration</h3>
+<ul>
+<li>Keyboard-only navigation across the shelf, Quick Capture, and Actions using arrow keys and Enter.</li>
+<li>First-run guided tour covering Drop, Later, Pin, Share, Quick Capture, screen-edge activation, and contextual Actions.</li>
+<li>Undo for reversible destructive actions such as clearing the shelf, removing pins, and dismissing Later items.</li>
+<li>Optional iCloud sync for preferences and pins across a user's own Macs.</li>
+<li>Focus Mode awareness to suppress resurfacing cards and click sounds while Focus is active.</li>
+<li>Fuzzy search across shelf items for fast partial-name and imperfect-match lookup.</li>
+</ul></div>
+<div class="release-block"><h3>QR codes</h3><ul><li>Create a QR code directly from text or a URL.</li><li>Scan with any phone Camera app — no SOBA installation or pairing required.</li></ul></div><p class="legal-note">Questions or feedback: <a href="mailto:sobaformac@icloud.com">sobaformac@icloud.com</a></p>
+</div></section></main>
+<footer class="site-footer">
+<a class="brand footer-brand" href="index.html"><img src="assets/soba-brand.png" alt="" class="brand-icon"><span>SOBA</span></a>
+<p>Your Mac Sidekick · Always within reach.</p>
+<div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a><a href="release-notes.html">Release Notes</a></div>
+<p class="copyright">© 2026 SOBA. All rights reserved.</p>
+</footer></body></html>

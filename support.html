@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f7fb">
+<link rel="icon" type="image/png" href="assets/soba-brand.png">
+<link rel="stylesheet" href="styles.css"><title>SOBA Support</title><script>
+(function(){const K="soba-theme";const saved=localStorage.getItem(K);const pref=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=saved||pref;
+addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[data-theme-choice]");function u(){bs.forEach(b=>b.classList.toggle("active",b.dataset.themeChoice===document.documentElement.dataset.theme))}bs.forEach(b=>b.onclick=()=>{document.documentElement.dataset.theme=b.dataset.themeChoice;localStorage.setItem(K,b.dataset.themeChoice);u()});u()})})();
+</script></head><body>
+<div class="page-glow page-glow-one"></div><div class="page-glow page-glow-two"></div>
+<header class="site-header">
+    <a class="brand brand-rich" href="index.html" aria-label="SOBA home">
+      <img src="assets/soba-brand.png" alt="" class="brand-icon" />
+      <span class="brand-stack"><strong>SOBA</strong><small>Your Mac Sidekick</small></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#quick-capture">Quick Capture</a>
+      <a href="index.html#smart-actions">Smart Actions</a>
+      <a href="index.html#qr">QR</a>
+      <a href="index.html#refined-experience">More</a>
+      <a href="index.html#privacy">Privacy</a>
+      <a href="release-notes.html">Release Notes</a>
+    </nav>
+
+    <div class="theme-toggle theme-toggle-labeled" aria-label="Website appearance">
+      <button type="button" data-theme-choice="light" title="Light mode" aria-label="Light mode"><span>☀</span> Light</button>
+      <button type="button" data-theme-choice="dark" title="Dark mode" aria-label="Dark mode"><span>◔</span> Dark</button>
+    </div>
+  </header>
+<main><section class="legal-hero"><div class="eyebrow">Support</div><h1>SOBA Support</h1><p>Help with installation, permissions, and everyday workflows.</p></section>
+<section class="content-page"><div class="content-card">
+<h2>Need help with SOBA?</h2><p>Start with the topics below. If you're still stuck, email <a href="mailto:sobaformac@icloud.com">sobaformac@icloud.com</a>.</p>
+<div class="support-grid">
+<article><h3>Quick Capture</h3><p>Press <code>⌥ S</code> to open SOBA from anywhere. Type, paste, or drop content and SOBA will show relevant actions.</p></article>
+<article><h3>Drop</h3><p>Drag a file toward your configured SOBA edge — right, left, top, or bottom — and place it on the shelf temporarily.</p></article>
+<article><h3>Later</h3><p>Use Later to bring an item or piece of context back tonight, tomorrow, this weekend, or at another time.</p></article>
+<article><h3>Pin</h3><p>Pin keeps screenshots, images, or other references visible above your work.</p></article>
+<article><h3>Share</h3><p>Use Share to send selected files, URLs, or text to a trusted destination.</p></article>
+<article><h3>Smart Actions</h3><p>SOBA changes available actions based on the item type, including images, PDFs, folders, URLs, JSON, timestamps, and commands.</p></article>
+<article><h3>Permissions</h3><p>If a feature isn't working, check macOS System Settings for the permission related to that feature.</p></article>
+<article><h3>Installation</h3><p>For the direct version, open the SOBA DMG, move SOBA into Applications, then launch it from Applications.</p></article>
+
+<article><h3>Keyboard navigation</h3><p>Use the arrow keys to move through shelf items, Quick Capture results, and Actions. Press Enter to open or run the selected default action.</p></article>
+<article><h3>Undo</h3><p>When you clear or remove a reversible SOBA item, use the temporary Undo action if you change your mind.</p></article>
+<article><h3>iCloud sync</h3><p>Optional iCloud sync can keep supported preferences and pins aligned across Macs signed in to your Apple account.</p></article>
+<article><h3>Focus Mode</h3><p>SOBA can stay quiet during an active Focus by suppressing resurfacing cards and click sounds.</p></article>
+<article><h3>Shelf search</h3><p>Use fuzzy search to find shelf items even when you remember only part of a filename or phrase.</p></article>
+<article><h3>First-run tour</h3><p>The onboarding tour introduces SOBA's core intentions, Quick Capture, screen-edge activation, and Smart Actions. You can revisit Help if you need a refresher.</p></article>
+<article><h3>QR codes</h3><p>Paste or capture text or a URL, then choose Create QR Code. Scan it with any phone Camera app. The phone does not need SOBA installed.</p></article></div>
+<div class="support-contact"><h3>Contact support</h3><p><a href="mailto:sobaformac@icloud.com">sobaformac@icloud.com</a></p></div>
+</div></section></main>
+<footer class="site-footer">
+<a class="brand footer-brand" href="index.html"><img src="assets/soba-brand.png" alt="" class="brand-icon"><span>SOBA</span></a>
+<p>Your Mac Sidekick · Always within reach.</p>
+<div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a><a href="release-notes.html">Release Notes</a></div>
+<p class="copyright">© 2026 SOBA. All rights reserved.</p>
+</footer></body></html>

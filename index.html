@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="SOBA for macOS — Drop, Later, Pin, Share and act on anything. Always within reach." />
+  <meta name="theme-color" content="#f7f7fb" />
+  <title>SOBA — Always within reach.</title>
+  <link rel="icon" type="image/png" href="assets/soba-brand.png" />
+  <link rel="stylesheet" href="styles.css" />
+<script>
+(function(){const K="soba-theme";const saved=localStorage.getItem(K);const pref=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=saved||pref;
+addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[data-theme-choice]");function u(){bs.forEach(b=>b.classList.toggle("active",b.dataset.themeChoice===document.documentElement.dataset.theme))}bs.forEach(b=>b.onclick=()=>{document.documentElement.dataset.theme=b.dataset.themeChoice;localStorage.setItem(K,b.dataset.themeChoice);u()});u()})})();
+</script></head>
+
+<body>
+  <div class="page-glow page-glow-one"></div>
+  <div class="page-glow page-glow-two"></div>
+
+  <header class="site-header">
+    <a class="brand brand-rich" href="#top" aria-label="SOBA home">
+      <img src="assets/soba-brand.png" alt="" class="brand-icon" />
+      <span class="brand-stack"><strong>SOBA</strong><small>Your Mac Sidekick</small></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#features">Features</a>
+      <a href="#quick-capture">Quick Capture</a>
+      <a href="#smart-actions">Smart Actions</a>
+      <a href="#qr">QR</a>
+      <a href="#refined-experience">More</a>
+      <a href="#privacy">Privacy</a>
+      <a href="release-notes.html">Release Notes</a>
+    </nav>
+
+    <div class="theme-toggle theme-toggle-labeled" aria-label="Website appearance">
+      <button type="button" data-theme-choice="light" title="Light mode" aria-label="Light mode"><span>☀</span> Light</button>
+      <button type="button" data-theme-choice="dark" title="Dark mode" aria-label="Dark mode"><span>◔</span> Dark</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">A smarter utility for your Mac</div>
+        <h1>Everything you need,<br><span>always within reach.</span></h1>
+        <p class="hero-subtitle">
+          SOBA gives you one effortless place to hold something, bring it back later,
+          keep it visible, share it, or act on it — without breaking your flow.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary button-large" href="#download">
+            <span class="apple-mark">⌘</span>
+            Download for Mac
+          </a>
+          <a class="button button-secondary button-large" href="#features">See how it works</a>
+        </div>
+
+        <div class="hero-meta">
+          <span>Native macOS</span>
+          <span class="dot">•</span>
+          <span>Local-first</span>
+          <span class="dot">•</span>
+          <span>No account required</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="icon-halo"></div>
+        <img class="hero-icon" src="assets/soba-brand.png" alt="SOBA — Always within reach." />
+      </div>
+    </section>
+
+    <section class="shortcut-strip" aria-label="SOBA core actions">
+      <div class="shortcut-copy">
+        <span class="shortcut-key">⌥ S</span>
+        <span>Open SOBA from anywhere.</span>
+      </div>
+      <div class="shortcut-actions">
+        <span>DROP</span><i></i>
+        <span>LATER</span><i></i>
+        <span>PIN</span><i></i>
+        <span>SHARE</span><i></i>
+        <span>ACTIONS</span>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-heading">
+        <div class="eyebrow">One place. Five everyday superpowers.</div>
+        <h2>Stay in flow.</h2>
+        <p>
+          SOBA lives close to what you are already doing instead of asking you to manage
+          yet another productivity system.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card accent-blue">
+          <div class="feature-icon">⌄</div>
+          <div>
+            <h3>Drop</h3>
+            <p>Temporarily hold files, folders, images, URLs, or text while you move somewhere else.</p>
+          </div>
+          <span class="feature-caption">Hold it</span>
+        </article>
+
+        <article class="feature-card accent-purple">
+          <div class="feature-icon">◷</div>
+          <div>
+            <h3>Later</h3>
+            <p>Bring an item or thought back tonight, tomorrow, this weekend, or whenever you need it.</p>
+          </div>
+          <span class="feature-caption">Remember it</span>
+        </article>
+
+        <article class="feature-card accent-pink">
+          <div class="feature-icon">⌖</div>
+          <div>
+            <h3>Pin</h3>
+            <p>Keep a screenshot, reference, note, or image floating above your work without switching windows.</p>
+          </div>
+          <span class="feature-caption">Keep it visible</span>
+        </article>
+
+        <article class="feature-card accent-green">
+          <div class="feature-icon">↗</div>
+          <div>
+            <h3>Share</h3>
+            <p>Send files, URLs, and text to trusted devices quickly, with a local-first workflow.</p>
+          </div>
+          <span class="feature-caption">Send it</span>
+        </article>
+
+        <article class="feature-card accent-orange feature-card-wide">
+          <div class="feature-icon">ϟ</div>
+          <div>
+            <h3>Actions</h3>
+            <p>
+              SOBA understands what you give it and shows useful actions — clean a URL,
+              format JSON, resize an image, copy a path, open a terminal, and more.
+            </p>
+          </div>
+          <span class="feature-caption">Do something with it</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section quick-capture-section" id="quick-capture">
+      <div class="quick-capture-copy quick-capture-copy-wide">
+        <div class="eyebrow">Quick Capture</div>
+        <h2>Press <kbd>⌥ S</kbd>.<br>SOBA figures out the rest.</h2>
+        <p>
+          Type, paste, or drop anything. SOBA detects the context and surfaces the actions
+          that make sense right now.
+        </p>
+
+        <div class="example-list example-list-horizontal">
+          <div class="example-row">
+            <code>Call insurance tomorrow</code>
+            <span>Later → Tomorrow</span>
+          </div>
+          <div class="example-row">
+            <code>https://example.com/?utm_source=…</code>
+            <span>Open · Clean · Pin · Share</span>
+          </div>
+          <div class="example-row">
+            <code>{"name":"Soba","active":true}</code>
+            <span>Format · Validate · Share</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="capture-examples capture-examples-grid" aria-label="SOBA contextual action examples">
+
+        <article class="capture-example">
+          <div class="use-case-copy">
+            <span class="use-case-kicker">Developer utility</span>
+            <h3>Working with JSON?</h3>
+            <p>Paste JSON into SOBA and instantly format, validate, copy, or share it without opening another tool.</p>
+          </div>
+          <div class="polished-mockup">
+      <div class="pm-top"><strong>SOBA</strong><span><em>Clear</em> ×</span></div>
+      <div class="pm-input"><span class="pm-handle">☰</span>{"name":"Soba","active":true}</div>
+      <div class="pm-card">
+        <div class="pm-kind-row">
+          <span class="pm-kind-icon pm-purple">{ }</span>
+          <div class="pm-kind-copy"><strong>JSON</strong><small>Valid structure detected</small></div>
+          <b class="pm-status pm-purple">Valid</b>
+        </div>
+        
+        <div class="pm-buttons"><button class="">Pin</button><button class="">Share⌄</button><button class="">Pretty Print</button></div>
+        <div class="pm-buttons pm-buttons-secondary"><button class="">Validate</button><button class="">•••⌄</button></div>
+        
+      </div>
+      <div class="pm-footer"><span>Open in Soba for more actions</span><button>✓&nbsp; Done</button></div>
+    </div>
+        </article>
+
+        <article class="capture-example">
+          <div class="use-case-copy">
+            <span class="use-case-kicker">Everyday image workflow</span>
+            <h3>Need to do something with an image?</h3>
+            <p>Drop or paste an image into SOBA to pin it, save it for later, share it, preview it, resize it, or convert it.</p>
+          </div>
+          <div class="polished-mockup">
+      <div class="pm-top"><strong>SOBA</strong><span><em>Clear</em> ×</span></div>
+      <div class="pm-input"><span class="pm-handle">☰</span>different_banners.png</div>
+      <div class="pm-card">
+        <div class="pm-kind-row">
+          <span class="pm-kind-icon pm-blue">▧</span>
+          <div class="pm-kind-copy"><strong>IMAGE</strong><small>Image detected</small></div>
+          <b class="pm-status pm-blue">Ready</b>
+        </div>
+        
+        <div class="pm-buttons"><button class="">Later⌄</button><button class="">Pin</button><button class="">Share⌄</button></div>
+        <div class="pm-buttons pm-buttons-secondary"><button class="">Quick Look</button><button class="">•••⌄</button></div>
+        
+      </div>
+      <div class="pm-footer"><span>Open in Soba for more actions</span><button>✓&nbsp; Done</button></div>
+    </div>
+        </article>
+
+        <article class="capture-example">
+          <div class="use-case-copy">
+            <span class="use-case-kicker">Document workflow</span>
+            <h3>Handling a PDF?</h3>
+            <p>SOBA keeps common PDF actions close so you can preview, compress, pin, postpone, or share a document in seconds.</p>
+          </div>
+          <div class="polished-mockup">
+      <div class="pm-top"><strong>SOBA</strong><span><em>Clear</em> ×</span></div>
+      <div class="pm-input"><span class="pm-handle">☰</span>125-1784673485342.pdf</div>
+      <div class="pm-card">
+        <div class="pm-kind-row">
+          <span class="pm-kind-icon pm-red">PDF</span>
+          <div class="pm-kind-copy"><strong>PDF FILE</strong><small>Document ready for actions</small></div>
+          <b class="pm-status pm-red">Ready</b>
+        </div>
+        
+        <div class="pm-buttons"><button class="">Later⌄</button><button class="">Pin</button><button class="">Share⌄</button></div>
+        <div class="pm-buttons pm-buttons-secondary"><button class="">Compress</button><button class="">•••⌄</button></div>
+        
+      </div>
+      <div class="pm-footer"><span>Open in Soba for more actions</span><button>✓&nbsp; Done</button></div>
+    </div>
+        </article>
+
+        <article class="capture-example">
+          <div class="use-case-copy">
+            <span class="use-case-kicker">Context-aware capture</span>
+            <h3>Copied an address?</h3>
+            <p>SOBA recognizes address-like text and gives you the useful next steps immediately—open Maps, keep plain text, pin it, share it, or bring it back later.</p>
+          </div>
+          <div class="polished-mockup">
+      <div class="pm-top"><strong>SOBA</strong><span><em>Clear</em> ×</span></div>
+      <div class="pm-input"><span class="pm-handle">☰</span>1 Infinite Loop, Cupertino CA</div>
+      <div class="pm-card">
+        <div class="pm-kind-row">
+          <span class="pm-kind-icon pm-green">⌖</span>
+          <div class="pm-kind-copy"><strong>ADDRESS</strong><small>Location detected</small></div>
+          <b class="pm-status pm-green">Recognized</b>
+        </div>
+        
+        <div class="pm-buttons"><button class="">Later⌄</button><button class="">Pin</button><button class="">Share⌄</button></div>
+        <div class="pm-buttons pm-buttons-secondary"><button class="">Maps</button><button class="">Copy Plain Text</button></div>
+        
+      </div>
+      <div class="pm-footer"><span>Open in Soba for more actions</span><button>✓&nbsp; Done</button></div>
+    </div>
+        </article>
+
+        <article class="capture-example">
+          <div class="use-case-copy">
+            <span class="use-case-kicker">Time utility</span>
+            <h3>Copied a Unix timestamp?</h3>
+            <p>SOBA recognizes timestamp-like values and instantly shows UTC, local, and relative time—useful when reading logs, API responses, database values, or debugging output.</p>
+          </div>
+          <div class="polished-mockup">
+      <div class="pm-top"><strong>SOBA</strong><span><em>Clear</em> ×</span></div>
+      <div class="pm-input"><span class="pm-handle">☰</span>1786731851000</div>
+      <div class="pm-card">
+        <div class="pm-kind-row">
+          <span class="pm-kind-icon pm-orange">◷</span>
+          <div class="pm-kind-copy"><strong>UNIX TIMESTAMP</strong><small>Time value detected</small></div>
+          <b class="pm-status pm-orange">Converted</b>
+        </div>
+        <div class="pm-details"><div><span>UTC</span><strong>Friday, August 14, 2026 at 6:24:11 PM</strong></div><div><span>Local</span><strong>Friday, August 14, 2026 at 11:24:11 AM</strong></div><div><span>Relative</span><strong>2 days ago</strong></div></div>
+        <div class="pm-buttons"><button class="">Pin</button><button class="">Copy Local Time</button><button class="">Copy UTC Time</button></div>
+        
+        
+      </div>
+      <div class="pm-footer"><span>Open in Soba for more actions</span><button>✓&nbsp; Done</button></div>
+    </div>
+        </article>
+
+        <article class="capture-example">
+          <div class="use-case-copy">
+            <span class="use-case-kicker">Developer command</span>
+            <h3>Copied a terminal command?</h3>
+            <p>SOBA recognizes command-like text so you can pin it, share it, copy it as plain text, or optionally send it to Terminal when that capability is enabled.</p>
+          </div>
+          <div class="polished-mockup">
+      <div class="pm-top"><strong>SOBA</strong><span><em>Clear</em> ×</span></div>
+      <div class="pm-input"><span class="pm-handle">☰</span>git status</div>
+      <div class="pm-card">
+        <div class="pm-kind-row">
+          <span class="pm-kind-icon pm-teal">>_</span>
+          <div class="pm-kind-copy"><strong>COMMAND</strong><small>Terminal command detected</small></div>
+          <b class="pm-status pm-teal">Ready</b>
+        </div>
+        
+        <div class="pm-buttons"><button class="">Pin</button><button class="">Share⌄</button><button class="">Plain Text</button></div>
+        
+        <button class="pm-disabled">Run in Terminal… (enable in Settings)</button>
+      </div>
+      <div class="pm-footer"><span>Open in Soba for more actions</span><button>✓&nbsp; Done</button></div>
+    </div>
+        </article>
+
+      </div>
+    </section>
+
+    
+    <section class="section" id="smart-actions">
+      <div class="section-heading">
+        <div class="eyebrow">Smart Actions</div>
+        <h2>Different file. Different actions.</h2>
+        <p>SOBA detects what you give it and changes the Actions menu automatically. Images, PDFs, and folders each get tools that make sense for that item.</p>
+      </div>
+
+      <div class="smart-grid">
+        <article class="smart-card">
+          <div class="smart-copy">
+            <span class="use-case-kicker">Image</span>
+            <h3>Image-specific actions</h3>
+            <p>Preview, convert, resize, compress, remove metadata, OCR text, save, copy paths, or reveal the image in Finder.</p>
+          </div>
+          <div class="smart-menu">
+            <div class="smart-menu-head"><b>SOBA</b><span>×</span></div>
+            <div class="smart-menu-item"><span class="kind blue">IMG</span><div><b>Screenshot 2026-08-14…</b><small>Image detected</small></div></div>
+            <div class="smart-buttons"><button>Copy</button><button>Pin</button><button>Later⌄</button><button>Share⌄</button></div>
+            <div class="smart-action-title">ϟ Actions⌄</div>
+            <div class="smart-popover">
+              <span>Quick Look</span><span>Convert to JPEG</span><span>Resize…</span><span>Convert to PNG</span>
+              <span>Compress</span><span>Remove Metadata</span><span>Copy Text from Image</span><span>Save…</span>
+              <span>Copy Path</span><span>Reveal in Finder</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="smart-card">
+          <div class="smart-copy">
+            <span class="use-case-kicker">PDF</span>
+            <h3>PDF-specific actions</h3>
+            <p>Compress, preview, split, extract pages, copy the path, or reveal the document in Finder.</p>
+          </div>
+          <div class="smart-menu">
+            <div class="smart-menu-head"><b>SOBA</b><span>×</span></div>
+            <div class="smart-menu-item"><span class="kind red">PDF</span><div><b>125-1784673485342.pdf</b><small>PDF detected</small></div></div>
+            <div class="smart-buttons"><button>Copy</button><button>Pin</button><button>Later⌄</button><button>Share⌄</button></div>
+            <div class="smart-action-title">ϟ Actions⌄</div>
+            <div class="smart-popover">
+              <span>Compress</span><span>Quick Look</span><span>Split</span><span>Extract Pages…</span>
+              <span>Copy Path</span><span>Copy Relative Path</span><span>Reveal in Finder</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="smart-card">
+          <div class="smart-copy">
+            <span class="use-case-kicker">Folder / Project</span>
+            <h3>Folder and developer actions</h3>
+            <p>Open Terminal here, launch IntelliJ or VS Code, open Finder, preview the folder, copy paths, or compress it.</p>
+          </div>
+          <div class="smart-menu">
+            <div class="smart-menu-head"><b>SOBA</b><span>×</span></div>
+            <div class="smart-menu-item"><span class="kind green">DIR</span><div><b>Soba</b><small>Folder detected</small></div></div>
+            <div class="smart-buttons"><button>Copy</button><button>Pin</button><button>Later⌄</button><button>Share⌄</button></div>
+            <div class="smart-action-title">ϟ Actions⌄</div>
+            <div class="smart-popover">
+              <span>Open Terminal Here</span><span>Open in IntelliJ</span><span>Open in VS Code</span><span>Open in Finder</span>
+              <span>Quick Look</span><span>Copy Path</span><span>Copy Relative Path</span><span>Copy Folder Name</span><span>Compress</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="edge-feature">
+        <div class="edge-copy">
+          <div class="eyebrow">Drag to SOBA</div>
+          <h2>Drag a file to the edge you choose.</h2>
+          <p>Configure SOBA to appear from the <strong>right, left, top, or bottom</strong> edge. Drag a file toward that edge and SOBA appears. From there you can Drop it, send it to Later, Pin it, Share it, or run actions tailored to that file type.</p>
+          <div class="edge-steps">
+            <div><span>1</span><b>Drag a file</b><small>From Finder, Desktop, Downloads, or another app.</small></div>
+            <div><span>2</span><b>Move to your configured edge</b><small>Right, left, top, or bottom.</small></div>
+            <div><span>3</span><b>SOBA appears</b><small>Take an action immediately based on the file type.</small></div>
+          </div>
+        </div>
+
+        <div class="edge-visual edge-visual-image">
+          <img src="assets/09_drag-to-right.png" alt="Drag a file, image, or text to the edge of your screen and SOBA catches it instantly." />
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section refined-section" id="refined-experience">
+      <div class="section-heading">
+        <div class="eyebrow">Built for daily use</div>
+        <h2>Fast when you want it. Quiet when you don’t.</h2>
+        <p>
+          SOBA now adds the small platform details that make a utility feel native:
+          full keyboard control, guided onboarding, Undo, optional iCloud sync,
+          Focus awareness, and fuzzy search across your shelf.
+        </p>
+      </div>
+
+      <div class="refined-grid">
+        <article class="refined-card keyboard-card">
+          <div class="refined-icon">⌨</div>
+          <div>
+            <span class="use-case-kicker">Keyboard-first</span>
+            <h3>Navigate without touching the mouse.</h3>
+            <p>Use arrow keys to move through the shelf, Quick Capture, and Actions. Press Enter to open the selected item or fire its default action.</p>
+          </div>
+          <div class="keyboard-demo">
+            <span>↑</span><span>↓</span><span class="wide-key">Enter</span>
+          </div>
+        </article>
+
+        <article class="refined-card">
+          <div class="refined-icon">◎</div>
+          <div>
+            <span class="use-case-kicker">First-run tour</span>
+            <h3>Discover SOBA in a minute.</h3>
+            <p>A short guided tour introduces Drop, Later, Pin, Share, Quick Capture, screen-edge activation, and contextual Actions without overwhelming first-time users.</p>
+          </div>
+          <div class="tour-dots"><span class="active"></span><span></span><span></span></div>
+        </article>
+
+        <article class="refined-card">
+          <div class="refined-icon">↶</div>
+          <div>
+            <span class="use-case-kicker">Safe by default</span>
+            <h3>Changed your mind? Undo it.</h3>
+            <p>Clear the shelf, remove a pin, or dismiss a Later item with confidence. SOBA gives you a temporary Undo action for reversible cleanup.</p>
+          </div>
+          <div class="undo-toast"><span>Removed from SOBA</span><button>Undo</button></div>
+        </article>
+
+        <article class="refined-card">
+          <div class="refined-icon">☁</div>
+          <div>
+            <span class="use-case-kicker">Optional iCloud sync</span>
+            <h3>Your setup follows you across your Macs.</h3>
+            <p>Sync preferences and pins through your own iCloud account. It is optional, Apple-managed, and keeps SOBA’s local-first model intact.</p>
+          </div>
+          <div class="sync-line"><span>MacBook</span><i></i><span>iCloud</span><i></i><span>Mac</span></div>
+        </article>
+
+        <article class="refined-card">
+          <div class="refined-icon">◐</div>
+          <div>
+            <span class="use-case-kicker">Focus-aware</span>
+            <h3>SOBA knows when not to interrupt.</h3>
+            <p>During an active Focus session, SOBA can suppress resurfacing cards and click sounds so your workflow stays quiet.</p>
+          </div>
+          <div class="focus-pill">Focus active · SOBA quiet</div>
+        </article>
+
+        <article class="refined-card">
+          <div class="refined-icon">⌕</div>
+          <div>
+            <span class="use-case-kicker">Fuzzy shelf search</span>
+            <h3>Find it even if you only remember part of it.</h3>
+            <p>Search across shelf items with partial words and imperfect matches, so a larger shelf stays fast to navigate.</p>
+          </div>
+          <div class="search-demo">
+            <span>⌕</span>
+            <code>arch rev</code>
+            <small>Architecture Review Skill</small>
+          </div>
+        </article>
+      </div>
+    </section>
+
+<section class="section philosophy">
+      <div class="philosophy-card">
+        <div>
+          <div class="eyebrow">Designed to disappear</div>
+          <h2>SOBA is not another place you have to manage.</h2>
+        </div>
+        <p>
+          Finder manages files. Reminders manages tasks. Browsers manage tabs.
+          SOBA owns the few seconds between <strong>having something</strong> and
+          <strong>doing something with it</strong>.
+        </p>
+      </div>
+    </section>
+
+    
+    <section class="section qr-section" id="qr">
+      <div class="qr-card">
+        <div class="qr-copy">
+          <div class="eyebrow">QR from text or links</div>
+          <h2>Send it to your phone. Instantly.</h2>
+          <p>Paste a link or text into SOBA and create a QR code in one step. Scan it with any phone's Camera app — no SOBA account, pairing, or app install required on the other device.</p>
+          <div class="qr-flow">
+            <span>Paste text or URL</span><i>→</i><span>Actions</span><i>→</i><span>Create QR Code</span><i>→</i><span>Scan with phone</span>
+          </div>
+          <div class="qr-benefits">
+            <span>✓ Works with plain text</span><span>✓ Works with URLs</span><span>✓ No pairing required</span><span>✓ No SOBA needed on the phone</span>
+          </div>
+        </div>
+
+        <div class="qr-demo">
+          <div class="qr-soba-window">
+            <div class="qr-window-top"><strong>SOBA</strong><span>×</span></div>
+            <div class="qr-input">https://example.com/article</div>
+            <div class="qr-actions">
+              <button>Open</button><button>Copy</button><button>Pin</button><button>Later</button><button>Share</button><button class="qr-highlight">Create QR Code</button>
+            </div>
+            <div class="qr-result">
+              <div class="fake-qr"><div class="qr-grid"><span class="b"></span><span class=""></span><span class="b"></span><span class="b"></span><span class=""></span><span class="b"></span><span class=""></span><span class="b"></span><span class="b"></span><span class="b"></span><span class=""></span><span class="b"></span><span class=""></span><span class="b"></span><span class="b"></span><span class=""></span><span class=""></span><span class="b"></span><span class="b"></span><span class="b"></span><span class="b"></span><span class=""></span><span class="b"></span><span class=""></span><span class="b"></span><span class="b"></span><span class="b"></span><span class=""></span><span class=""></span><span class="b"></span><span class="b"></span><span class=""></span><span class="b"></span><span class="b"></span><span class=""></span><span class=""></span><span class="b"></span><span class="b"></span><span class=""></span><span class="b"></span><span class="b"></span><span class=""></span><span class="b"></span><span class=""></span><span class=""></span><span class=""></span><span class="b"></span><span class="b"></span><span class=""></span><span class="b"></span><span class="b"></span><span class=""></span><span class="b"></span><span class=""></span><span class="b"></span><span class=""></span><span class="b"></span><span class="b"></span><span class=""></span><span class="b"></span><span class="b"></span><span class=""></span><span class="b"></span><span class="b"></span><span class="b"></span><span class=""></span><span class=""></span><span class="b"></span><span class=""></span><span class="b"></span><span class=""></span><span class="b"></span><span class=""></span><span class="b"></span><span class="b"></span><span class="b"></span><span class=""></span><span class="b"></span><span class="b"></span><span class=""></span><span class=""></span></div></div>
+              <div class="qr-result-copy"><strong>Scan with your phone</strong><small>No SOBA required</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section privacy-section" id="privacy">
+      <div class="privacy-card">
+        <div class="privacy-lock">●</div>
+        <div>
+          <div class="eyebrow">Local-first by design</div>
+          <h2>Your Pocket stays on your Mac.</h2>
+          <p>
+            SOBA is designed around local workflows. Your files, clipboard items, screenshots,
+            and quick-capture content do not need to become somebody else's cloud data just to be useful.
+          </p>
+        </div>
+        <div class="privacy-points">
+          <span>✓ No account required</span>
+          <span>✓ Native macOS experience</span>
+          <span>✓ Local-first processing</span>
+          <span>✓ Optional iCloud sync for preferences & pins</span>
+          <span>✓ Direct sharing where possible</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section download-section" id="download">
+      <div class="download-card">
+        <div class="download-art">
+          <img src="assets/soba-brand.png" alt="SOBA app icon and wordmark" />
+        </div>
+        <div class="download-copy">
+          <div class="eyebrow">Direct download</div>
+          <h2>Get SOBA for macOS.</h2>
+          <p>
+            Download the notarized SOBA installer and drag SOBA into your Applications folder.
+          </p>
+
+          <div class="download-actions">
+            <a href="https://apps.apple.com/us/app/soba-quick-capture-actions/id6801710759?mt=12&itscg=30200&itsct=apps_box_badge&mttnsubad=6801710759" style="display: inline-block;">
+<img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1787011200" alt="Download on the App Store" style="width: 244px; height: 82px; vertical-align: middle; object-fit: contain;" />
+</a>
+          </div>
+
+          <div class="download-info">
+            <span>macOS</span>
+            <span>•</span>
+            <span>Apple silicon</span>
+            <span>•</span>
+            <span>Version <strong>1.2</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section mini-faq">
+      <div class="section-heading compact">
+        <div class="eyebrow">Quick answers</div>
+        <h2>Simple on purpose.</h2>
+        <p>Everything you need to start using SOBA in a few seconds.</p>
+      </div>
+
+      <div class="faq-grid">
+        <details>
+          <summary>How do I open SOBA quickly?</summary>
+          <p>Press <code>⌥ S</code> from anywhere on your Mac to open Quick Capture. You can type, paste, or drop something and SOBA will show the most useful actions.</p>
+        </details>
+
+        <details>
+          <summary>What can I put in SOBA?</summary>
+          <p>You can work with files, folders, URLs, text, screenshots, images, clipboard content, JSON, paths, and other everyday content.</p>
+        </details>
+
+        <details>
+          <summary>What is Drop?</summary>
+          <p>Drop is a temporary shelf. Put something there while you move to another Finder folder, app, Space, or screen, then drag it back out when you need it.</p>
+        </details>
+
+        <details>
+          <summary>What is Later?</summary>
+          <p>Later brings something back when you are ready for it. Choose tonight, tomorrow, this weekend, next week, or another time without turning it into a complicated task.</p>
+        </details>
+
+        <details>
+          <summary>What is Pin?</summary>
+          <p>Pin keeps a screenshot, image, note, or reference visible above your work so you do not have to keep switching windows.</p>
+        </details>
+
+        <details>
+          <summary>How does Share work?</summary>
+          <p>Share lets you quickly send files, URLs, or text to a trusted device. SOBA is designed to favor direct, local-first sharing where possible.</p>
+        </details>
+
+        <details>
+          <summary>What are Actions?</summary>
+          <p>Actions change depending on what you give SOBA. A URL can offer Open or Clean URL, JSON can offer Format or Validate, an image can offer Resize or Convert, and a project folder can offer Terminal or IDE actions.</p>
+        </details>
+
+        <details>
+          <summary>Does SOBA require an account?</summary>
+          <p>No. SOBA is designed to work locally on your Mac without requiring an account for its core experience.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#top">
+      <img src="assets/soba-brand.png" alt="" class="brand-icon" />
+      <span>SOBA</span>
+    </a>
+    <p>Always within reach.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+      <a href="release-notes.html">Release Notes</a>
+      <a href="#download">Download</a>
+    </div>
+    <p class="copyright">© <span id="year"></span> SOBA. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
