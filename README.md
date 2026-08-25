@@ -19,7 +19,7 @@ downloads/
 Copy your **Developer ID signed + notarized** release DMG to:
 
 ```text
-downloads/Soba-1.2.dmg
+downloads/Soba-1.3.1.dmg
 ```
 
 The Download button in `index.html` already points to that file.
@@ -27,7 +27,7 @@ The Download button in `index.html` already points to that file.
 If you want a versioned filename such as:
 
 ```text
-Soba-1.2.0.dmg
+Soba-1.3.1.dmg
 ```
 
 change this line in `index.html`:
@@ -39,7 +39,7 @@ href="downloads/Soba-1.0.dmg"
 to:
 
 ```html
-href="downloads/Soba-1.2.0.dmg"
+href="downloads/Soba-1.3.1.dmg"
 ```
 
 ## Customize before publishing
@@ -47,7 +47,7 @@ href="downloads/Soba-1.2.0.dmg"
 Search `index.html` for:
 
 - `support@example.com`
-- `Version 1.2`
+- `Version 1.3.1`
 - `Apple silicon`
 - Privacy wording
 - Download filename

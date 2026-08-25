@@ -15,19 +15,19 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
     </a>
 
     <nav class="nav-links" aria-label="Primary navigation">
-      <a href="index.html#features">Features</a>
-      <a href="index.html#quick-capture">Quick Capture</a>
+      <a href="index.html#features">Drag to SOBA</a>
+      <a href="index.html#quick-capture-shortcut">Quick Capture</a>
       <a href="index.html#smart-actions">Smart Actions</a>
-      <a href="index.html#qr">QR</a>
-      <a href="index.html#refined-experience">More</a>
-      <a href="index.html#privacy">Privacy</a>
-      <a href="release-notes.html">Release Notes</a>
+      <a href="index.html#workspaces">What's New</a>
+      <a href="index.html#back-to-source">Back to Source</a>
+      <a href="index.html#more">More</a>
+          <a class="nav-get-soba" href="index.html#download">Get SOBA</a>
     </nav>
 
-    <div class="theme-toggle theme-toggle-labeled" aria-label="Website appearance">
-      <button type="button" data-theme-choice="light" title="Light mode" aria-label="Light mode"><span>☀</span> Light</button>
-      <button type="button" data-theme-choice="dark" title="Dark mode" aria-label="Dark mode"><span>◔</span> Dark</button>
-    </div>
+    <button class="theme-toggle theme-icon-toggle" type="button"
+        aria-label="Switch to dark mode" title="Switch to dark mode">
+        <span class="theme-icon" aria-hidden="true"></span>
+      </button>
   </header>
 <main><section class="legal-hero"><div class="eyebrow">Privacy</div><h1>Privacy Policy</h1><p>How SOBA handles your content and permissions.</p></section>
 <section class="content-page"><div class="content-card">
@@ -42,9 +42,15 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
 <h3>Optional iCloud sync</h3>
 <p>If you enable iCloud sync, SOBA may store supported preferences and pin data in your Apple iCloud account so those items can stay in sync across your Macs. This is optional and uses Apple's iCloud infrastructure rather than a SOBA-operated cloud account.</p>
 <h3>QR codes</h3><p>When you create a QR code from text or a URL, SOBA encodes that content directly into the QR image. The receiving phone can read it with its Camera app and does not need a SOBA account or installation.</p><h3>Permissions</h3><p>macOS permissions may be requested for specific features. SOBA should request access only when the related feature is used.</p>
-<h3>Contact</h3><p>Privacy questions: <a href="mailto:sobaformac@icloud.com">sobaformac@icloud.com</a></p>
+<h3
+        <h2>Workspaces</h2>
+        <p>Workspace names and collected items follow the same local-first model as the rest of SOBA. If optional iCloud sync is enabled, supported synced data uses your own iCloud account.</p>
+
+<h2>Contact</h2></h3><p>Privacy questions: <a href="mailto:sobaformac@icloud.com">sobaformac@icloud.com</a></p>
 <p class="legal-note">Last updated: August 14, 2026.</p>
-</div></section></main>
+</div>
+</section>
+</main>
 <footer class="site-footer">
 <a class="brand footer-brand" href="index.html"><img src="assets/soba-brand.png" alt="" class="brand-icon"><span>SOBA</span></a>
 <p>Your Mac Sidekick · Always within reach.</p>
