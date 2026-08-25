@@ -372,6 +372,24 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
         </div>
       </div>
     </section>
+
+
+<section class="section review-section" id="review-soba">
+  <div class="review-card">
+    <div class="eyebrow">Enjoying SOBA?</div>
+    <h2>Share your experience.</h2>
+    <p>Help other Mac users discover SOBA by leaving a quick review on Product Hunt.</p>
+    <a class="product-hunt-review-link"
+       href="https://www.producthunt.com/products/soba-always-within-reach/reviews/new?utm_source=badge-product_review&amp;utm_medium=badge&amp;utm_source=badge-soba&#0045;always&#0045;within&#0045;reach"
+       target="_blank" rel="noopener noreferrer">
+      <img class="product-hunt-review-badge no-lightbox"
+           src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1300827&amp;theme=light"
+           alt="Review SOBA — Always within reach on Product Hunt"
+           width="250" height="54">
+    </a>
+  </div>
+</section>
+
 </main>
 
   <footer class="site-footer">
@@ -441,7 +459,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeBtn = lightbox.querySelector(".image-lightbox-close");
 
   const images = document.querySelectorAll(
-    "main img:not(.hero-icon):not(.brand-icon)"
+    "main img:not(.hero-icon):not(.brand-icon):not(.no-lightbox)"
   );
 
   images.forEach((img) => {
