@@ -21,14 +21,15 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
   <header class="site-header">
     <a class="brand brand-rich" href="#top" aria-label="SOBA home">
       <img src="assets/soba-brand.png" alt="" class="brand-icon" />
-      <span class="brand-stack"><strong>SOBA</strong><small>Your Mac Sidekick</small></span>
+      <span class="brand-stack"><strong>SOBA</strong><small>Always Within Reach</small></span>
     </a>
 
     <nav class="nav-links" aria-label="Primary navigation">
       <a href="#features">Drag to SOBA</a>
       <a href="#quick-capture-shortcut">Quick Capture</a>
       <a href="#smart-actions">Smart Actions</a>
-      <a href="#workspaces">What's New</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#workspaces">Workspaces</a>
       <a href="#back-to-source">Back to Source</a>
       <a href="#more">More</a>
           <a class="nav-get-soba" href="#download">Get SOBA</a>
@@ -89,9 +90,9 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
           <h2>Drag to the edge.<br>SOBA knows where it goes.</h2>
           <p>Use the same screen-edge gesture whether you are collecting for a Workspace or just need SOBA for something quick.</p>
         </div>
-        <img src="assets/just_drag_animated.gif" alt="SOBA collecting Africa Trip.pdf into the active Africa Trip Workspace" class="workspace-collecting-image">
+        <img src="assets/just_drag_animated.gif" data-dark-src="assets/just_drag_animated.gif" data-light-src="assets/just_drag_light_animated.gif" alt="Drag any file, image, or text to the screen edge and SOBA catches it instantly" class="workspace-collecting-image">
 		<p>One edge. Two smart ways to drop.</p>
-		<img src="assets/screen-edge.png" alt="SOBA collecting Africa Trip.pdf into the active Africa Trip Workspace" class="workspace-collecting-image">
+		<img src="assets/screen-edge.png" data-dark-src="assets/screen-edge.png" data-light-src="assets/screen-edge-light.jpeg" alt="SOBA collecting Africa Trip.pdf into the active Africa Trip Workspace" class="workspace-collecting-image">
 
       </div>
     </section>
@@ -190,6 +191,66 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
 
     </section>
 
+
+<section class="section timeline-web-section" id="timeline">
+  <div class="section-heading timeline-web-heading">
+    <div class="eyebrow">Timeline</div>
+    <h2>Remember what you worked on.</h2>
+    <p>
+      SOBA turns your Mac activity into a visual timeline, helping you understand
+      where your day went and quickly return to the context behind your work.
+    </p>
+  </div>
+
+  <div class="timeline-web-visual">
+    <img
+      src="assets/timeline-dark.png" data-dark-src="assets/timeline-dark.png" data-light-src="assets/timeline-light.png"
+      alt="SOBA Timeline showing hourly activity cards, Ask SOBA, and a Time Spent summary"
+      class="timeline-feature-image"
+    />
+  </div>
+
+  <div class="timeline-web-points">
+    <article>
+      <span class="timeline-point-icon">◷</span>
+      <div>
+        <strong>See your day</strong>
+        <p>Hourly cards turn your activity into a clear visual history instead of a long raw log.</p>
+      </div>
+    </article>
+
+    <article>
+      <span class="timeline-point-icon">▥</span>
+      <div>
+        <strong>Understand your time</strong>
+        <p>See when you were active, what you were using, and how your time was distributed.</p>
+      </div>
+    </article>
+
+    <article>
+      <span class="timeline-point-icon">✦</span>
+      <div>
+        <strong>Ask SOBA</strong>
+        <p>Ask natural questions about previous days, apps you opened, or something you remember seeing.</p>
+      </div>
+    </article>
+
+    <article>
+      <span class="timeline-point-icon">↗</span>
+      <div>
+        <strong>Return to context</strong>
+        <p>Use the timeline and activity details together to understand what happened and pick up where you left off.</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="timeline-web-note">
+    <strong>Your day, remembered.</strong>
+    <span>Without keeping a manual log.</span>
+  </div>
+</section>
+
+
 <section class="section" id="workspaces">
       <div class="section-heading">
         <div class="eyebrow">Workspaces</div>
@@ -202,7 +263,7 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
       </div>
 
       <div class="workspace-demo">
-<img src="assets/new-workspaces.png" alt="SOBA collecting Africa Trip.pdf into the active Africa Trip Workspace" class="workspace-collecting-image">
+<img src="assets/workspaces-dark.png" data-dark-src="assets/workspaces-dark.png" data-light-src="assets/workspaces-light.png" alt="SOBA collecting Africa Trip.pdf into the active Africa Trip Workspace" class="workspace-collecting-image">
       </div>
     </section>
 
@@ -225,7 +286,7 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
 
         <div class="source-feature-visual" aria-label="SOBA Back to Source example">
          
-          		<img src="assets/back-to-source.png" alt="SOBA Back to source" class="workspace-collecting-image">          
+          		<img src="assets/back-to-source-dark.png" data-dark-src="assets/back-to-source-dark.png" data-light-src="assets/back-to-source-light.png" alt="SOBA Back to source" class="workspace-collecting-image">          
         </div>
       </div>
     </section>
@@ -367,7 +428,7 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
             <span>•</span>
             <span>Apple silicon</span>
             <span>•</span>
-            <span>Version <strong>1.4</strong></span>
+            <span>Version <strong>1.6</strong></span>
           </div>
         </div>
       </div>
@@ -508,6 +569,31 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.key === "Escape" && lightbox.classList.contains("open")) close();
   });
 });
+</script>
+
+
+<script id="soba-theme-image-sync">
+(function () {
+  function syncSobaThemeImages() {
+    var theme = document.documentElement.getAttribute('data-theme');
+    if (!theme) {
+      theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
+        ? 'light' : 'dark';
+    }
+    document.querySelectorAll('img[data-dark-src][data-light-src]').forEach(function(img) {
+      var src = theme === 'light' ? img.dataset.lightSrc : img.dataset.darkSrc;
+      if (img.getAttribute('src') !== src) img.setAttribute('src', src);
+    });
+  }
+
+  syncSobaThemeImages();
+  document.addEventListener('DOMContentLoaded', syncSobaThemeImages);
+
+  new MutationObserver(syncSobaThemeImages).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+  });
+})();
 </script>
 
 </body>

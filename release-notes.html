@@ -3,10 +3,52 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f7f7fb">
 <link rel="icon" type="image/png" href="assets/soba-brand.png">
-<link rel="stylesheet" href="styles.css"><title>SOBA Release Notes</title><script>
-(function(){const K="soba-theme";const saved=localStorage.getItem(K);const pref=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=saved||pref;
-addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[data-theme-choice]");function u(){bs.forEach(b=>b.classList.toggle("active",b.dataset.themeChoice===document.documentElement.dataset.theme))}bs.forEach(b=>b.onclick=()=>{document.documentElement.dataset.theme=b.dataset.themeChoice;localStorage.setItem(K,b.dataset.themeChoice);u()});u()})})();
-</script></head><body>
+<link rel="stylesheet" href="styles.css"><title>SOBA Release Notes</title>
+<script id="soba-page-theme">
+(function () {
+  const KEY = "soba-theme";
+
+  function preferredTheme() {
+    const saved = localStorage.getItem(KEY);
+    if (saved === "light" || saved === "dark") return saved;
+    return window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark" : "light";
+  }
+
+  function updateToggle() {
+    const btn = document.querySelector(".theme-toggle");
+    if (!btn) return;
+    const current = document.documentElement.dataset.theme || preferredTheme();
+    const next = current === "dark" ? "light" : "dark";
+    btn.setAttribute("aria-label", "Switch to " + next + " mode");
+    btn.setAttribute("title", "Switch to " + next + " mode");
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem(KEY, theme);
+    updateToggle();
+  }
+
+  // Apply before interaction to avoid mismatch.
+  document.documentElement.dataset.theme = preferredTheme();
+
+  document.addEventListener("DOMContentLoaded", function () {
+    updateToggle();
+
+    const btn = document.querySelector(".theme-toggle");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        const current = document.documentElement.dataset.theme || preferredTheme();
+        applyTheme(current === "dark" ? "light" : "dark");
+      });
+    }
+  });
+})();
+</script>
+
+</head><body>
 <div class="page-glow page-glow-one"></div><div class="page-glow page-glow-two"></div>
 <header class="site-header">
     <a class="brand brand-rich" href="index.html" aria-label="SOBA home">
@@ -31,7 +73,18 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
   </header>
 <main><section class="legal-hero"><div class="eyebrow">Release Notes</div><h1>What's new in SOBA</h1><p>Release history and feature updates.</p></section>
 <section class="content-page"><div class="content-card">
-<h2>SOBA 1.4</h2><p class="release-date">August 2026</p>
+<h2>SOBA 1.6</h2><p class="release-date">September 2026</p>
+
+<div class="release-block"><h3>Timeline — Personal Activity Memory</h3><ul>
+<li>New Timeline view helps you remember what you worked on across your Mac throughout the day.</li>
+<li>See activity across apps, documents, websites, and other work in a visual day timeline with real start times and durations.</li>
+<li>Activity is grouped into meaningful sessions so related work stays together while short app switches do not fragment your day.</li>
+<li>Open a Timeline activity to return to its context, including available files, folders, links, titles, and the originating app.</li>
+<li>Use Summary to quickly understand where your time went during the day.</li>
+<li>Ask SOBA about your activity with natural questions such as what you worked on yesterday or when you were using a particular app.</li>
+<li>Activity Memory is local to your Mac and can be turned on or paused whenever you choose.</li>
+</ul></div>
+
 <div class="release-block"><h3>Workspaces</h3><ul>
 <li>Collect related items into lightweight Workspaces and resume them when you are ready.</li>
 <li>Add captured items directly to a Workspace from SOBA's contextual actions.</li>

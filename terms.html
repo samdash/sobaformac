@@ -3,10 +3,52 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f7f7fb">
 <link rel="icon" type="image/png" href="assets/soba-brand.png">
-<link rel="stylesheet" href="styles.css"><title>SOBA Terms of Use</title><script>
-(function(){const K="soba-theme";const saved=localStorage.getItem(K);const pref=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=saved||pref;
-addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[data-theme-choice]");function u(){bs.forEach(b=>b.classList.toggle("active",b.dataset.themeChoice===document.documentElement.dataset.theme))}bs.forEach(b=>b.onclick=()=>{document.documentElement.dataset.theme=b.dataset.themeChoice;localStorage.setItem(K,b.dataset.themeChoice);u()});u()})})();
-</script></head><body>
+<link rel="stylesheet" href="styles.css"><title>SOBA Terms of Use</title>
+<script id="soba-page-theme">
+(function () {
+  const KEY = "soba-theme";
+
+  function preferredTheme() {
+    const saved = localStorage.getItem(KEY);
+    if (saved === "light" || saved === "dark") return saved;
+    return window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark" : "light";
+  }
+
+  function updateToggle() {
+    const btn = document.querySelector(".theme-toggle");
+    if (!btn) return;
+    const current = document.documentElement.dataset.theme || preferredTheme();
+    const next = current === "dark" ? "light" : "dark";
+    btn.setAttribute("aria-label", "Switch to " + next + " mode");
+    btn.setAttribute("title", "Switch to " + next + " mode");
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem(KEY, theme);
+    updateToggle();
+  }
+
+  // Apply before interaction to avoid mismatch.
+  document.documentElement.dataset.theme = preferredTheme();
+
+  document.addEventListener("DOMContentLoaded", function () {
+    updateToggle();
+
+    const btn = document.querySelector(".theme-toggle");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        const current = document.documentElement.dataset.theme || preferredTheme();
+        applyTheme(current === "dark" ? "light" : "dark");
+      });
+    }
+  });
+})();
+</script>
+
+</head><body>
 <div class="page-glow page-glow-one"></div><div class="page-glow page-glow-two"></div>
 <header class="site-header">
     <a class="brand brand-rich" href="index.html" aria-label="SOBA home">

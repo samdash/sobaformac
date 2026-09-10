@@ -4054,3 +4054,313 @@ body.lightbox-open{
   height:54px;
   max-width:100%;
 }
+
+
+/* =========================================================
+   Timeline — website feature presentation
+   ========================================================= */
+.timeline-web-section{
+  scroll-margin-top:110px;
+}
+
+.timeline-web-heading{
+  max-width:780px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+
+.timeline-web-heading p{
+  max-width:720px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.timeline-web-visual{
+  width:min(1180px,calc(100% - 40px));
+  margin:28px auto 0;
+  padding:10px;
+  border:1px solid var(--line);
+  border-radius:26px;
+  background:var(--panel);
+  overflow:hidden;
+}
+
+.timeline-feature-image{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:18px;
+}
+
+.timeline-web-points{
+  width:min(1120px,calc(100% - 40px));
+  margin:22px auto 0;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+}
+
+.timeline-web-points article{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--panel);
+}
+
+.timeline-point-icon{
+  flex:0 0 34px;
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border-radius:10px;
+  background:rgba(139,92,246,.13);
+  color:#9b70ff;
+  font-weight:800;
+}
+
+.timeline-web-points strong{
+  display:block;
+  margin:1px 0 5px;
+}
+
+.timeline-web-points p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5;
+}
+
+.timeline-web-note{
+  width:min(580px,calc(100% - 40px));
+  margin:18px auto 0;
+  display:flex;
+  justify-content:center;
+  gap:7px;
+  flex-wrap:wrap;
+  padding:13px 18px;
+  border-radius:14px;
+  border:1px solid rgba(139,92,246,.28);
+  background:rgba(139,92,246,.07);
+  color:var(--muted);
+  text-align:center;
+}
+
+.timeline-web-note strong{
+  color:#9b70ff;
+}
+
+@media(max-width:900px){
+  .timeline-web-points{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:560px){
+  .timeline-web-visual,
+  .timeline-web-points{
+    width:calc(100% - 24px);
+  }
+  .timeline-web-points{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* =========================================================
+   Header brand alignment fix
+   Keep tagline contained so it never crowds "Drag to SOBA".
+   ========================================================= */
+.site-header{
+  grid-template-columns:auto minmax(0,1fr) auto !important;
+  column-gap:24px !important;
+}
+
+.brand-rich{
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  min-width:0 !important;
+  flex:0 0 auto !important;
+}
+
+.brand-rich .brand-icon{
+  flex:0 0 auto !important;
+}
+
+.brand-stack{
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  min-width:0 !important;
+  line-height:1.05 !important;
+}
+
+.brand-stack strong{
+  display:block !important;
+  white-space:nowrap !important;
+}
+
+.brand-stack small{
+  display:block !important;
+  white-space:nowrap !important;
+  font-size:11px !important;
+  line-height:1.15 !important;
+  margin-top:3px !important;
+  letter-spacing:-0.01em !important;
+}
+
+/* Give navigation its own space instead of letting it overlap the brand. */
+.nav-links{
+  min-width:0 !important;
+  justify-self:end !important;
+  margin-left:10px !important;
+}
+
+/* Slightly tighten the first nav item only, preserving the rest of the nav. */
+.nav-links > a:first-child{
+  margin-left:4px !important;
+}
+
+@media (max-width:1180px){
+  .site-header{
+    column-gap:18px !important;
+  }
+
+  .brand-rich{
+    gap:8px !important;
+  }
+
+  .brand-stack small{
+    font-size:10px !important;
+  }
+
+  .nav-links{
+    margin-left:4px !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL HEADER OVERLAP FIX
+   Reserve real space for the SOBA brand and stop the nav from
+   being translated back over the tagline.
+   ========================================================= */
+
+.site-header{
+  display:grid !important;
+  grid-template-columns: 165px minmax(0,1fr) auto !important;
+  align-items:center !important;
+  column-gap:28px !important;
+}
+
+/* Brand block gets its own fixed column. */
+.site-header .brand-rich{
+  width:165px !important;
+  min-width:165px !important;
+  max-width:165px !important;
+  display:flex !important;
+  align-items:center !important;
+  gap:9px !important;
+  overflow:visible !important;
+}
+
+.site-header .brand-rich .brand-icon{
+  width:44px !important;
+  height:44px !important;
+  flex:0 0 44px !important;
+}
+
+.site-header .brand-stack{
+  width:112px !important;
+  min-width:112px !important;
+  max-width:112px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  overflow:visible !important;
+}
+
+.site-header .brand-stack strong{
+  white-space:nowrap !important;
+  line-height:1 !important;
+}
+
+.site-header .brand-stack small{
+  white-space:nowrap !important;
+  font-size:10px !important;
+  line-height:1.1 !important;
+  margin-top:4px !important;
+}
+
+/* Critical: cancel the older left-shift rules that were causing overlap. */
+.site-header .nav-links{
+  transform:none !important;
+  translate:none !important;
+  margin-left:0 !important;
+  padding-left:0 !important;
+  justify-self:start !important;
+  position:static !important;
+  left:auto !important;
+  right:auto !important;
+}
+
+/* Ensure the first nav item starts after the reserved brand column. */
+.site-header .nav-links > a:first-child{
+  margin-left:0 !important;
+}
+
+/* Keep everything on one line on normal desktop widths. */
+.site-header .nav-links{
+  display:flex !important;
+  align-items:center !important;
+  flex-wrap:nowrap !important;
+  white-space:nowrap !important;
+  gap:18px !important;
+}
+
+/* Slightly tighter nav spacing only on smaller desktop widths. */
+@media (max-width:1250px){
+  .site-header{
+    grid-template-columns:160px minmax(0,1fr) auto !important;
+    column-gap:22px !important;
+  }
+
+  .site-header .brand-rich{
+    width:160px !important;
+    min-width:160px !important;
+    max-width:160px !important;
+  }
+
+  .site-header .nav-links{
+    gap:14px !important;
+  }
+
+  .site-header .nav-links a{
+    font-size:14px !important;
+  }
+}
+
+@media (max-width:1100px){
+  .site-header .nav-links{
+    gap:11px !important;
+  }
+
+  .site-header .nav-links a{
+    font-size:13px !important;
+  }
+}
+
+
+/* Real paired Light/Dark feature artwork — never filter or invert these images. */
+img[data-dark-src][data-light-src]{
+  filter:none !important;
+}
+html[data-theme="light"] img[data-dark-src][data-light-src],
+html[data-theme="dark"] img[data-dark-src][data-light-src]{
+  filter:none !important;
+}
