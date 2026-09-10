@@ -4364,3 +4364,126 @@ html[data-theme="light"] img[data-dark-src][data-light-src],
 html[data-theme="dark"] img[data-dark-src][data-light-src]{
   filter:none !important;
 }
+
+
+/* ============================================================
+   Smart Actions constructed mockups — true Light Mode
+   Dark mode remains unchanged.
+   ============================================================ */
+html[data-theme="light"] #smart-actions .visual-frame,
+html[data-theme="light"] #smart-actions + .showcase-panel .visual-frame,
+html[data-theme="light"] .showcase-panel:has(.quick-mock-v2) .visual-frame{
+  background:
+    radial-gradient(circle at 50% 8%, rgba(124,58,237,.08), transparent 42%),
+    #eef1f6 !important;
+  border-color:#dfe3ea !important;
+}
+
+/* QUICK CAPTURE */
+html[data-theme="light"] .quick-mock-v2{
+  background:#ffffff !important;
+  border-color:#d8dde7 !important;
+  color:#171b26 !important;
+  box-shadow:0 18px 42px rgba(24,32,48,.14) !important;
+}
+html[data-theme="light"] .quick-v2-top{
+  color:#697386 !important;
+}
+html[data-theme="light"] .quick-brand strong{
+  color:#262b36 !important;
+}
+html[data-theme="light"] .quick-v2-field{
+  background:#f7f8fb !important;
+  border-color:#7c3aed !important;
+  color:#697386 !important;
+  box-shadow:inset 0 0 0 1px rgba(124,58,237,.12) !important;
+}
+html[data-theme="light"] .quick-v2-tools{
+  color:#6f7787 !important;
+}
+html[data-theme="light"] .quick-v2-tools i{
+  background:#d9dee7 !important;
+}
+html[data-theme="light"] .quick-v2-hint{
+  background:#f1f3f7 !important;
+  color:#747d8f !important;
+}
+
+/* SMART RECOGNITION */
+html[data-theme="light"] .smart-item-window{
+  background:#ffffff !important;
+  border-color:#d9dee7 !important;
+  color:#171b26 !important;
+  box-shadow:0 18px 42px rgba(24,32,48,.14) !important;
+}
+html[data-theme="light"] .action-top{
+  color:#1d2330 !important;
+}
+html[data-theme="light"] .action-top span,
+html[data-theme="light"] .action-footer span{
+  color:#737c8e !important;
+}
+html[data-theme="light"] .action-input{
+  background:#f2f4f8 !important;
+  color:#222936 !important;
+}
+html[data-theme="light"] .action-card{
+  background:#f5f6f9 !important;
+  color:#171b26 !important;
+}
+html[data-theme="light"] .action-kind small{
+  color:#778194 !important;
+}
+html[data-theme="light"] .action-kind>b{
+  color:#218a4a !important;
+}
+html[data-theme="light"] .edge-actions button,
+html[data-theme="light"] .action-buttons button,
+html[data-theme="light"] .source-actions button,
+html[data-theme="light"] .workspace-head button,
+html[data-theme="light"] .quick-footer button{
+  background:#ffffff !important;
+  border-color:#d8dde7 !important;
+  color:#242a35 !important;
+}
+html[data-theme="light"] .carrier-picker{
+  background:#ffffff !important;
+  border-color:#d9dee7 !important;
+  color:#171b26 !important;
+  box-shadow:0 18px 42px rgba(24,32,48,.14) !important;
+}
+html[data-theme="light"] .carrier-picker p{
+  color:#636d80 !important;
+}
+html[data-theme="light"] .carrier-picker button{
+  background:#eef1f5 !important;
+  color:#252b37 !important;
+}
+html[data-theme="light"] .carrier-picker button.primary{
+  background:#1486ff !important;
+  color:#ffffff !important;
+}
+
+/* USEFUL NEXT ACTIONS */
+html[data-theme="light"] .mini-action-card{
+  background:#ffffff !important;
+  border-color:#d9dee7 !important;
+  color:#171b26 !important;
+  box-shadow:0 16px 34px rgba(18,24,38,.12) !important;
+}
+html[data-theme="light"] .mini-action-head strong{
+  color:#252b37 !important;
+}
+html[data-theme="light"] .mini-action-head small{
+  color:#788294 !important;
+}
+html[data-theme="light"] .mini-action-menu span{
+  background:#eef1f5 !important;
+  color:#252b37 !important;
+}
+html[data-theme="light"] .mini-action-card:first-child .mini-action-menu span:first-child,
+html[data-theme="light"] .mini-action-card:nth-child(2) .mini-action-menu span:last-child,
+html[data-theme="light"] .mini-action-card:nth-child(3) .mini-action-menu span:first-child{
+  background:#6f35cf !important;
+  color:#ffffff !important;
+}
