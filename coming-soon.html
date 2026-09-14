@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get SOBA — Always within reach</title>
+    <style>
+        :root {
+            /* Sleek, premium Apple-inspired dark mode palette */
+            --primary: #4F46E5;
+            --primary-hover: #4338CA;
+            --bg: #0B0F19;
+            --card-bg: rgba(22, 28, 45, 0.6);
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border: rgba(255, 255, 255, 0.06);
+            --shortcut-bg: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            /* Smooth background ambient glow mimicking macOS wallpapers */
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.08) 0px, transparent 50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4);
+            max-width: 440px;
+            width: 100%;
+            padding: 40px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .badge {
+            background: rgba(99, 102, 241, 0.1);
+            color: #A5B4FC;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            display: inline-block;
+            margin-bottom: 24px;
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(99, 102, 241, 0.15);
+        }
+
+        .app-icon-frame {
+            width: 88px;
+            height: 88px;
+            background: linear-gradient(135deg, #4F46E5, #312E81);
+            border-radius: 22px; /* Authentic macOS Squircle feel */
+            margin: 0 auto 24px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            box-shadow: 
+                0 10px 20px rgba(79, 70, 229, 0.3),
+                inset 0 1px 1px rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            font-size: 1.85rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0 0 8px 0;
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: #818CF8;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0 0 28px 0;
+        }
+
+        .intro {
+            margin-bottom: 12px;
+        }
+
+        .notify-copy {
+            margin: 0 auto 26px;
+            color: #CBD5E1;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 10px;
+            max-width: 360px;
+            text-align: center;
+        }
+
+        .email-drop-icon {
+            width: 24px;
+            height: 18px;
+            object-fit: contain;
+            flex: 0 0 24px;
+            display: block;
+            margin-top: 1px;
+        }
+.form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(10, 15, 26, 0.7);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            outline: none;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+        }
+
+        input[type="email"]:focus {
+            border-color: var(--primary);
+            background: rgba(10, 15, 26, 0.9);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.25);
+        }
+
+        input[type="email"]::placeholder {
+            color: #475569;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+        }
+
+        button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+        }
+
+        .meta-footer {
+            margin-top: 24px;
+            font-size: 0.75rem;
+            color: #475569;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .shortcut {
+            background: var(--shortcut-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--text-muted);
+            font-family: monospace;
+        }
+
+        @media (max-width: 520px) {
+            body {
+                padding: 16px;
+            }
+
+            .product-card {
+                padding: 32px 24px;
+                border-radius: 20px;
+            }
+
+            .meta-footer {
+                flex-wrap: wrap;
+                row-gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="product-card">
+    <span class="badge">SOBA for Mac is coming soon. 🚀</span>
+    
+    <!-- App Icon Placeholder with Download Tray Icon -->
+    <div class="app-icon-frame">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+    </div>
+    
+    <h1>Get SOBA for Mac</h1>
+    <div class="tagline">Always within reach.</div>
+    
+    <p class="intro">
+        Your new Mac sidekick is almost ready. Keep temporary files within reach, organize related items in Workspaces, revisit your day with Timeline, and capture ideas without breaking your flow.
+    </p>
+
+    <p class="notify-copy"><img class="email-drop-icon" src="assets/email-drop-icon.png" alt="" aria-hidden="true"><span>Drop your email below and we’ll let you know the moment SOBA is ready.</span></p>
+    
+    <form action="https://api.web3forms.com/submit" method="POST" class="form-group">
+        <input type="hidden" name="access_key" value="3c0efb3e-7f23-4b80-8949-a49b822e3a67">
+        <input type="hidden" name="subject" value="New SOBA Coming Soon signup">
+        <input type="hidden" name="from_name" value="SOBA Website">
+        <input type="email" name="email" placeholder="Enter your email address" required autocomplete="email">
+        <button type="submit">Notify Me on Release</button>
+    </form>
+
+    <div class="meta-footer">
+        <span>Native macOS</span>
+        <span>Local-first</span>
+        <span>Shortcut <span class="shortcut">⌥ S</span></span>
+    </div>
+</div>
+
+</body>
+</html>
