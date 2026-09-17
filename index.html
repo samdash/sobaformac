@@ -40,7 +40,7 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
       <a href="#smart-actions"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6Z"/></svg><span class="nav-label">Smart Actions</span></a>
       <a href="#timeline"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg><span class="nav-label">Timeline</span></a>
       <a href="#workspaces"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h7l2 2h9v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg><span class="nav-label">Workspaces</span></a>
-      <a href="#back-to-source"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7 4 12l5 5"/><path d="M5 12h8a6 6 0 0 1 6 6"/></svg><span class="nav-label">Back to Source</span></a>
+      <a href="#clipboard"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="12" height="15" rx="2"/><path d="M9 5V3h6v2"/><path d="M9 10h6M9 14h6"/></svg><span class="nav-label">Clipboard</span></a>
       <a href="#more"><svg class="nav-icon nav-icon-more" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg><span class="nav-label">More</span></a></nav>
 
     <div class="header-actions">
@@ -278,33 +278,22 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
       </div>
     </section>
 
-    <section class="section source-section" id="back-to-source">
-      <div class="source-feature-card">
-        <div class="source-feature-copy">
-          <div class="eyebrow">Back to Source</div>
-          <h2>SOBA remembers where things came from.</h2>
-          <p>
-            Collect something now without losing its context. When you need it again,
-            SOBA keeps the original source close so you can get back without retracing your steps.
-          </p>
-
-          <div class="source-points">
-            <div><span>1</span><p><strong>Collect it</strong><small>Drag, paste, or capture something into SOBA.</small></p></div>
-            <div><span>2</span><p><strong>SOBA keeps the source</strong><small>The original file or location stays associated with the item when available.</small></p></div>
-            <div><span>3</span><p><strong>Go back when you need it</strong><small>Open the source again instead of searching for it manually.</small></p></div>
-          </div>
-        </div>
-
-        <div class="source-feature-visual" aria-label="SOBA Back to Source example">
-         
-          		<img src="assets/back-to-source-dark.png" data-dark-src="assets/back-to-source-dark.png" data-light-src="assets/back-to-source-light.png" alt="SOBA Back to source" class="workspace-collecting-image">          
-        </div>
+    
+    <section class="section clipboard-section" id="clipboard">
+      <div class="section-heading">
+        <div class="eyebrow">Clipboard</div>
+        <h2>Everything you copy, ready when you need it.</h2>
+        <p>SOBA keeps a history of what you copy on your Mac, with the newest clips always at the top. Browse through your clipboard history to find something you copied earlier, edit text before using it again, pin important clips, and take useful actions—all without interrupting your workflow.</p>
+      </div>
+      <div class="clipboard-feature">
+        <img
+          src="assets/clipboard-dark.jpg"
+          data-dark-src="assets/clipboard-dark.jpg"
+          data-light-src="assets/clipboard-light.jpg"
+          alt="SOBA Clipboard History with Edit Text, Pin, and clipboard Actions"
+          class="workspace-collecting-image clipboard-feature-image">
       </div>
     </section>
-
-
-
-    
 
 <section class="section more-section" id="more">
   <div class="more-intro">
@@ -475,7 +464,7 @@ addEventListener("DOMContentLoaded",()=>{const bs=document.querySelectorAll("[da
       <a href="terms.html">Terms</a>
       <a href="support.html">Support</a>
       <a href="release-notes.html">Release Notes</a>
-      <a href="#download">Download</a>
+      <a href="coming-soon.html">Download</a>
     </div>
     <p class="copyright">© <span id="year"></span> SOBA. All rights reserved.</p>
   </footer>
